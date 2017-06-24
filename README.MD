@@ -1,5 +1,5 @@
 
-This project attempt to provide a quick working sample of Nightwatch tests.
+This project attempts to provide a quick working sample of Nightwatch tests.
 
 Only tested with Chrome (58) and Firefox (54) on Windows.
 
