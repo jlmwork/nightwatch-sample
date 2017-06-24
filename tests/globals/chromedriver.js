@@ -1,13 +1,14 @@
+var debug = require('debug')('tests:globals');
 var chromedriver = require('chromedriver');
 module.exports = {
   before : function(done) {
-    console.log("START STANDALONE CHROME DRIVER");
+    debug("START STANDALONE CHROMEDRIVER");
     chromedriver.start();
     done();
   },
 
   after : function(done) {
-    console.log("STOP STANDALONE CHROME DRIVER");
+    debug("STOP STANDALONE CHROMEDRIVER");
     chromedriver.stop();
     done();
   }
