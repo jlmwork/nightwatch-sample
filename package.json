@@ -1,0 +1,24 @@
+{
+  "name": "nightwatch-sample",
+  "version": "1.0.0",
+  "description": "A working sample of automated tests with Nighwatch",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "rimraf reports && mkdir reports",
+    "test": "npm run test:localchrome",
+    "test:chrome": "nightwatch --env chrome",
+    "test:firefox": "nightwatch --env firefox",
+    "test:localchrome": "nightwatch --env localchrome",
+    "test:localfirefox": "nightwatch --env localfirefox",
+    "test:ci": "nightwatch --env chrome"
+  },
+  "author": "jlamande.cap@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "chromedriver": "^2.30.1",
+    "debug": "^2.6.8",
+    "geckodriver": "^1.7.1",
+    "nightwatch": "^0.9.16",
+    "selenium-server": "^3.4.0"
+  }
+}
