@@ -48,7 +48,7 @@ Currently, no way to use env vars, so you need to adapt the ```nightwatch.conf.j
   nightwatchConf.test_settings.default.selenium_port = 4444;
 ```
 
-## Launch the tests
+# Launch the tests
 
 By default on Chrome local in standalone mode (no selenium server, no java required) :
 ```sh
