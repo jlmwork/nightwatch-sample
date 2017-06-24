@@ -20,7 +20,7 @@ Chromedriver AND NOW geckodriver support CDN Urls :
    * [more infos](https://www.npmjs.com/package/geckodriver)
  * CHROMEDRIVER_CDNURL
    * ```CHROMEDRIVER_CDNURL=https://npm.taobao.org/mirrors/chromedriver npm install chromedriver```
-* with by local file path : ```CHROMEDRIVER_FILEPATH=/path/to/chromedriver_mac64.zip```
+* with local file path : ```CHROMEDRIVER_FILEPATH=/path/to/chromedriver_mac64.zip```
    * [more infos](https://www.npmjs.com/package/chromedriver)
 
 
@@ -51,30 +51,29 @@ Currently, no way to use env vars, so you need to adapt the ```nightwatch.conf.j
 ## Launch the tests
 
 By default on Chrome local in standalone mode (no selenium server, no java required) :
-```
+```sh
 npm run test
+# equivalent
+npm run test:localchrome
 ```
 
 ### local selenium server
-```
-npm run test:localchrome
-```
-or
-```
+for firefox :
+```sh
 npm run test:localfirefox
 ```
 
 ### remote selenium server
-```
+```sh
 npm run test:chrome
 ```
 or
-```
+```sh
 npm run test:firefox
 ```
 
 
 ### With some debug :
-```
+```sh
 DEBUG=* npm run test
 ```
