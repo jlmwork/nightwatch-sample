@@ -39,15 +39,6 @@ cli_args: {
     },
 ```
 
-### Remote Selenium Server or Grid
-Currently, no way to use env vars, so you need to adapt the ```nightwatch.conf.js``` file with your settings :
-
-```js
-// remote selenium server
-  nightwatchConf.test_settings.default.selenium_host = 'your_remote_selenium_server';
-  nightwatchConf.test_settings.default.selenium_port = 4444;
-```
-
 # Launch the tests
 
 By default on Chrome local in standalone mode (no selenium server, no java required) :
@@ -72,8 +63,25 @@ or
 npm run test:firefox
 ```
 
+#### Configure the Remote Selenium Server or Grid
 
-### With some debug :
+_those options are not used in case of localfirefox or localchrome profiles_
+
+Use env vars
+```js
+SELENIUM_HOST=my_server_host SELENIUM_PORT=my_server_port npm test
+```
+
+or adapt the ```nightwatch.conf.js``` file with your settings for more persistent changes :
+
+```js
+// remote selenium server
+  nightwatchConf.test_settings.default.selenium_host = 'your_remote_selenium_server';
+  nightwatchConf.test_settings.default.selenium_port = 4444;
+```
+
+
+### Add some debug :
 ```sh
 DEBUG=* npm run test
 ```

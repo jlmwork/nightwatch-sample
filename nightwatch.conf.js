@@ -86,10 +86,10 @@ if (env == 'localfirefox') {
   nightwatchConf.selenium.start_process = true;
 } else if (env == 'localchrome') {
   nightwatchConf.globals_path = 'tests/globals/chromedriver.js';
-} else {
+} else if (env != 'default') {
   // remote selenium server
-  nightwatchConf.test_settings.default.selenium_host = 'your_remote_selenium_server';
-  nightwatchConf.test_settings.default.selenium_port = 4444;
+  nightwatchConf.test_settings.default.selenium_host = process.env.SELENIUM_HOST || 'your_remote_selenium_server';
+  nightwatchConf.test_settings.default.selenium_port = process.env.SELENIUM_PORT || 4444;
 }
 
 debug(nightwatchConf);
